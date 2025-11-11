@@ -1,74 +1,44 @@
-import { View, Text, StyleSheet, Image } from "react-native";
 import React, { Component } from "react";
-import YoutubePlayer from "react-native-youtube-iframe";
+import { ThemeProvider } from "styled-components/native";
+import Jobs from "./components/Jobs";
+
+const theme = {
+  colors: {
+    bg: "#0f1115",
+    card: "#1c2129",
+    cardAlt: "#252c36",
+    primary: "#6366F1",
+    primaryAccent: "#818CF8",
+    text: "#E5E7EB",
+    textDim: "#94A3B8",
+    border: "#2c3440",
+    danger: "#EF4444",
+    success: "#10B981",
+  },
+  radius: {
+    xs: 4,
+    sm: 8,
+    md: 14,
+    lg: 22,
+    pill: 999,
+  },
+  spacing: (m = 1) => 4 * m,
+  font: {
+    h1: "24px",
+    h2: "20px",
+    body: "15px",
+    small: "12px",
+  },
+};
 
 class App extends Component {
   render() {
-    let nome = "Levy";
-    let img =
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR64zTVSf1tz1PlUrBvTvoCzb1Hj7OneUDLJFYrXergv80uT7rm_OjUTCBmXvlXOhC2sSc&usqp=CAU";
     return (
-      <View style={styles.container}>
-        <Text style={styles.text}>Bem vindo ao app de teste!</Text>
-
-        <Text style={styles.description}>
-          Este é um aplicativo React Native usando classe.
-        </Text>
-
-        <Text style={styles.curso}>Sistemas de Informação, UNINASSAU</Text>
-
-        <Text style={styles.curso}>Feito por {nome}</Text>
-
-        <Image
-          /*source={{
-            uri: img,
-          }}*/
-          source={{
-            uri: "https://pt.quizur.com/_image?href=https://img.quizur.com/f/img64e2a6f57661a0.16805417.png?lastEdited=1692575504&w=1024&h=1024&f=webp",
-          }}
-          style={{
-            width: 300,
-            height: 300,
-            marginTop: 20,
-            marginBottom: 20,
-            borderRadius: 10,
-          }}
-        />
-
-        <View style={{ width: 320, marginTop: 10 }}>
-          <YoutubePlayer
-            height={200}
-            play={false}
-            videoId="F3wJzNQUivw"
-            webViewProps={{ allowsFullscreenVideo: true }}
-          />
-        </View>
-      </View>
+      <ThemeProvider theme={theme}>
+        <Jobs />
+      </ThemeProvider>
     );
   }
 }
 
 export default App;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#fff",
-  },
-  text: {
-    fontSize: 18,
-    color: "#222",
-  },
-  description: {
-    fontSize: 14,
-    color: "#666",
-    marginTop: 10,
-  },
-  curso: {
-    fontSize: 12,
-    color: "#999",
-    marginTop: 5,
-  },
-});

@@ -1,0 +1,149 @@
+$bg: #0f1115;
+$text: #e5e7eb;
+$text-dim: #94a3b8;
+$primary: #6366f1;
+$border: #2c3440;
+$card: #1c2129;
+$card-alt: #252c36;
+
+.container {
+  flex: 1;
+  background-color: $bg;
+  padding-top: 32px;
+}
+.header {
+  padding: 0 20px 12px 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: $text;
+}
+.tag {
+  background-color: $card-alt;
+  color: $text-dim;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.scrollArea {
+  flex: 1;
+  padding: 0 18px;
+}
+.heroCard {
+  background-color: #1d2430;
+  border-width: 1px;
+  border-color: $border;
+  border-radius: 22px;
+  padding: 18px;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 40px;
+  margin-right: 16px;
+  border-width: 2px;
+  border-color: $primary;
+}
+.heroTitle {
+  color: $text;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.heroSubtitle {
+  color: $text-dim;
+  font-size: 13px;
+}
+.sectionCard {
+  background-color: $card;
+  border-width: 1px;
+  border-color: $border;
+  border-radius: 14px;
+  padding: 16px 18px 18px 18px;
+  margin-bottom: 18px;
+}
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: $text;
+  margin-bottom: 8px;
+}
+.paragraph {
+  font-size: 14px;
+  color: $text-dim;
+  margin-bottom: 4px;
+}
+.videoCard {
+  background-color: $card-alt;
+  border-width: 1px;
+  border-color: $border;
+  border-radius: 14px;
+  padding: 16px 16px 20px 16px;
+}
+.videoHeader {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.videoTitle {
+  color: $text;
+  font-size: 15px;
+  font-weight: 600;
+}
+.chip {
+  background-color: $primary;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+}
+.playerWrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.actionsRow {
+  flex-direction: row;
+}
+.primaryButton {
+  background-color: $primary;
+  padding: 12px 20px;
+  border-radius: 8px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin-right: 12px;
+}
+.primaryButtonText {
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+.ghostButton {
+  background-color: $card;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: $border;
+  flex: 1;
+  align-items: center;
+}
+.ghostButtonText {
+  color: $text-dim;
+  font-size: 14px;
+  font-weight: 500;
+}
+.footerSpace {
+  height: 40px;
+}
