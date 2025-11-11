@@ -59,15 +59,13 @@ export default function Jobs() {
           </View>
           <View style={styles.actionsRow}>
             <TouchableOpacity
-              style={[styles.primaryButton, styles.button]}
-              onPress={() => setPlaying(!playing)}
+              style={[styles.ghostButton, styles.button]}
+              onPress={() => setPlaying(false)}
             >
-              <Text style={styles.primaryButtonText}>
-                {playing ? "Pausar" : "Reproduzir"}
-              </Text>
+              <Text style={styles.ghostButtonText}>Parar</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={[styles.ghostButton, styles.button]}
+              style={styles.ghostButton}
               onPress={() => setPlaying(false)}
             >
               <Text style={styles.ghostButtonText}>Parar</Text>
@@ -181,18 +179,8 @@ const styles = StyleSheet.create({
   },
   playerWrapper: { borderRadius: 8, overflow: "hidden", marginBottom: 14 },
   actionsRow: { flexDirection: "row" },
-  button: { flex: 1 },
-  primaryButton: {
-    backgroundColor: C.primary,
-    paddingVertical: 12,
-    paddingHorizontal: 20,
-    borderRadius: 8,
-    marginRight: 12,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  primaryButtonText: { color: "#fff", fontWeight: "600", fontSize: 14 },
   ghostButton: {
+    flex: 1,
     backgroundColor: C.card,
     paddingVertical: 12,
     paddingHorizontal: 20,
