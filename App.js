@@ -20,6 +20,8 @@ class App extends Component {
 
         <Text style={styles.curso}>Sistemas de Informação, UNINASSAU</Text>
 
+        <Text style={styles.curso}>Feito por {nome}</Text>
+
         <Image
           /*source={{
             uri: img,
