@@ -4,17 +4,14 @@ import YoutubePlayer from "react-native-youtube-iframe";
 
 class App extends Component {
   render() {
-
     let nome = "Levy";
-    let img = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR64zTVSf1tz1PlUrBvTvoCzb1Hj7OneUDLJFYrXergv80uT7rm_OjUTCBmXvlXOhC2sSc&usqp=CAU';
+    let img =
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR64zTVSf1tz1PlUrBvTvoCzb1Hj7OneUDLJFYrXergv80uT7rm_OjUTCBmXvlXOhC2sSc&usqp=CAU";
     return (
-      
       <View style={styles.container}>
-
         <Text style={styles.text}>Bem vindo ao app de teste!</Text>
 
         <Text style={styles.description}>
-
           Este é um aplicativo React Native usando classe.
         </Text>
 
@@ -26,7 +23,9 @@ class App extends Component {
           /*source={{
             uri: img,
           }}*/
-          source={{ uri: 'https://pt.quizur.com/_image?href=https://img.quizur.com/f/img64e2a6f57661a0.16805417.png?lastEdited=1692575504&w=1024&h=1024&f=webp' }}
+          source={{
+            uri: "https://pt.quizur.com/_image?href=https://img.quizur.com/f/img64e2a6f57661a0.16805417.png?lastEdited=1692575504&w=1024&h=1024&f=webp",
+          }}
           style={{
             width: 300,
             height: 300,
@@ -40,7 +39,7 @@ class App extends Component {
           <YoutubePlayer
             height={200}
             play={false}
-            videoId="CEq6suSvmFs"
+            videoId="F3wJzNQUivw"
             webViewProps={{ allowsFullscreenVideo: true }}
           />
         </View>
